@@ -1,8 +1,8 @@
 # Signature Text PixelCNN
 
-This project bundles three tasks in one notebook: signature verification (classical features + CNN), word-level LSTM sentence completion, and PixelCNN generation on binarized MNIST.
+A compact, single-notebook project that compares classical features and neural models across three tasks: signature verification, word-level LSTM sentence completion, and PixelCNN generation on binarized MNIST. Plots and full run logs are included for reproducibility.
 
-**Contents**
+**Project Structure**
 - `signature-text-pixelcnn.ipynb`
 - `signature_verification.md`
 - `lstm_sentence_completion.md`
@@ -13,14 +13,15 @@ This project bundles three tasks in one notebook: signature verification (classi
 - `report_images/`
 
 **Datasets**
-- `signature-verification-dataset/`: signature images for writer identification and forged vs genuine analysis.
-- `shakespeare-plays/`: text corpus for word-level language modeling.
+- `signature-verification-dataset/`: signature images used for signer classification and forged vs genuine analysis.
+- `shakespeare-plays/`: text corpus used for word-level language modeling.
 - `mnist/`: IDX-format MNIST files used for binarized PixelCNN experiments.
 
 **Notebook**
-The notebook outputs were cleared and are preserved below for reference.
+- `signature-text-pixelcnn.ipynb` contains all code for data loading, training, evaluation, and plotting.
+- Outputs are cleared in the notebook; the results and logs are captured below.
 
-**Outputs: Signature Verification**
+**Signature Verification Results**
 
 Key visuals:
 
@@ -61,71 +62,6 @@ Epoch 10 | train_loss=0.0494 | test_loss=0.0284 | train_acc=0.9863 | test_acc=0.
 Epoch 11 | train_loss=0.0464 | test_loss=0.0467 | train_acc=0.9876 | test_acc=0.9888
 Epoch 12 | train_loss=0.0565 | test_loss=0.0356 | train_acc=0.9842 | test_acc=0.9935
 Classification report for best model:
-              precision    recall  f1-score   support
-         001       1.00      1.00      1.00        16
-         002       1.00      1.00      1.00        18
-         003       1.00      1.00      1.00        18
-         004       1.00      1.00      1.00        18
-         006       1.00      1.00      1.00        18
-         009       1.00      1.00      1.00        18
-         012       0.90      1.00      0.95        18
-         013       1.00      1.00      1.00        12
-         014       1.00      1.00      1.00        20
-         015       1.00      1.00      1.00        18
-         016       0.91      1.00      0.95        20
-         017       1.00      1.00      1.00        12
-         018       0.92      1.00      0.96        12
-         019       1.00      1.00      1.00        12
-         020       1.00      0.93      0.97        15
-         021       1.00      1.00      1.00        12
-         022       1.00      1.00      1.00        14
-         023       1.00      1.00      1.00        10
-         024       1.00      1.00      1.00        12
-         025       1.00      1.00      1.00        10
-         026       1.00      1.00      1.00        12
-         027       1.00      1.00      1.00        10
-         028       1.00      0.83      0.91        12
-         029       1.00      1.00      1.00        12
-         030       1.00      0.83      0.91        12
-         031       1.00      1.00      1.00        10
-         032       1.00      1.00      1.00        12
-         033       1.00      1.00      1.00        14
-         034       1.00      1.00      1.00        12
-         035       1.00      1.00      1.00        12
-         036       1.00      1.00      1.00        12
-         037       1.00      1.00      1.00        14
-         038       1.00      1.00      1.00        12
-         039       1.00      1.00      1.00        12
-         040       1.00      1.00      1.00        10
-         041       1.00      1.00      1.00        12
-         042       1.00      1.00      1.00        12
-         043       1.00      1.00      1.00        12
-         044       1.00      1.00      1.00        12
-         045       1.00      1.00      1.00        12
-         046       1.00      0.83      0.91        12
-         047       1.00      1.00      1.00        12
-         048       1.00      1.00      1.00        10
-         049       1.00      1.00      1.00        24
-         050       1.00      1.00      1.00        24
-         051       1.00      1.00      1.00        20
-         052       1.00      1.00      1.00        28
-         053       1.00      1.00      1.00        28
-         054       1.00      1.00      1.00        32
-         055       1.00      1.00      1.00        24
-         056       1.00      1.00      1.00        20
-         057       1.00      1.00      1.00        24
-         058       1.00      1.00      1.00        28
-         059       0.91      1.00      0.95        20
-         060       1.00      1.00      1.00        24
-         061       1.00      1.00      1.00        24
-         062       1.00      1.00      1.00        24
-         063       1.00      1.00      1.00        24
-         064       1.00      1.00      1.00        20
-         065       1.00      1.00      1.00        20
-         066       1.00      1.00      1.00        28
-         067       1.00      1.00      1.00        20
-         068       1.00      1.00      1.00        20
-         069       1.00      1.00      1.00        24
     accuracy                           0.99      1075
    macro avg       0.99      0.99      0.99      1075
 weighted avg       0.99      0.99      0.99      1075
@@ -136,7 +72,7 @@ Interpretation: if the CNN is best, learned features captured signer-specific st
 
 </details>
 
-**Outputs: Word-Level LSTM Sentence Completion**
+**Word-Level LSTM Results**
 
 Key visuals:
 
@@ -236,7 +172,7 @@ Interpretation:
 
 </details>
 
-**Outputs: PixelCNN on Binarized MNIST**
+**PixelCNN on Binarized MNIST Results**
 
 Key visuals:
 
